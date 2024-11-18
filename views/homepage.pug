@@ -1,0 +1,29 @@
+doctype html
+html 
+    head 
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+        
+    body    
+        h1 Custom Object Table
+        br
+        table
+          tbody
+           tr
+             td 
+              a(href="/update" class="add-update-link") Add / Update this table
+        
+        table
+            thead
+            tr
+                th Name
+                th School
+                th Year Completed
+            tbody
+            each certifications in data
+                tr
+                td #{certifications.properties.name}
+                td #{certifications.properties.school}
+                td #{certifications.properties.year_completed}
+
