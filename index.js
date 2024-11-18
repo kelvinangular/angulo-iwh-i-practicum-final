@@ -36,6 +36,8 @@ app.get('/', async (req, res) => {
         const response = await axios.get(certifications, data, { headers });
         const data = response.data.results;
         //const data = response.data; Leave for testing purposes
+
+        // render route
         res.render('homepage', {title: 'Certifications | Hubspot APIs', data});
         //res.json(data); Leave for testing purposes
      } catch (error) {
